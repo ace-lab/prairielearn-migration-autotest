@@ -4,10 +4,11 @@ import os
 import uuid
 import shutil
 
-def create_instance(pl_repo, instance_mkdir, instance_long=None, instance_short=None):
+def create_instance(pl_repo, instance_mkdir, instance_long=None, instance_short=None, instance_hide=True):
     course_json = {
         "uuid": str(uuid.uuid4()),
         "longName": instance_long if instance_long else instance_mkdir,
+        "hideInEnrollPage": instance_hide,
     }
 
     if instance_short:

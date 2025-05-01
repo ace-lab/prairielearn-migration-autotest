@@ -27,6 +27,7 @@ parser.add_argument("--create_instance", default=False, type=str2bool)
 parser.add_argument("--instance_mkdir")
 parser.add_argument("--instance_long")
 parser.add_argument("--instance_short", default=None)
+parser.add_argument("--instance_hide", default=True, type=str2bool)
 
 parser.add_argument("--remove_instance", default=False, type=str2bool)
 parser.add_argument("--instance_rmdir", default="TemplateCourseInstance", type=str)
