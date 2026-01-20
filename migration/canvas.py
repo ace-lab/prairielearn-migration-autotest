@@ -25,10 +25,6 @@ class Canvas:
             self.__class__._api_url = getattr(self, 'config', {}).get("api_url", "https://canvas.ubc.ca/api/")
         # Now inherit it
         self.api_url = self.__class__._api_url
-        breakpoint()
-
-        if not hasattr(self, 'api_url'):
-            self.api_url = getattr(self, 'config', {}).get("api_url", "https://canvas.ubc.ca/api/")
         self.url_prefix = "v1"
         self.new_url_prefix = "quiz/v1"
 
